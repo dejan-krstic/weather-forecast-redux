@@ -6,7 +6,7 @@ export default class City {
         this.longitude = data.city.coord.lon;
     }
     getTempList() {
-        return this.weatherList.map(weather => weather.main.temp);
+        return this.weatherList.map(weather => weather.main.temp - 273);
     }
     getPressureList() {
         return this.weatherList.map(weather => weather.main.pressure);

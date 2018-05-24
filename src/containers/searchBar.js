@@ -16,7 +16,7 @@ class SearchBar extends Component {
     onFormSubmit() {
         event.preventDefault();
         this.props.fetchWeather(this.state.city, this.state.countryCode);
-        this.setState({ term: "", countryCode: "" });
+        this.setState({ city: "", countryCode: "" });
     }
 
     render() {
@@ -28,14 +28,14 @@ class SearchBar extends Component {
                         <input
                             placeholder="City..."
                             className="form-control"
-                            value={this.state.term}
+                            value={this.state.city}
                             onChange={(event) => this.setState({ city: event.target.value })} />
                         </div>
                     <div className="col-md-2">
                         <input
                             placeholder="Country code..."
                             className="form-control"
-                            value={this.state.term}
+                            value={this.state.countryCode}
                             onChange={(event) => this.setState({ countryCode: event.target.value })} />
                     </div>
                 </div>
