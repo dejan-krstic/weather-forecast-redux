@@ -15,12 +15,12 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                enforce: "pre",
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "eslint-loader",
-            },
+            // {
+            //     enforce: "pre",
+            //     test: /\.js$/,
+            //     exclude: /node_modules/,
+            //     loader: "eslint-loader",
+            // },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -56,7 +56,7 @@ module.exports = {
     },
 	plugins: [
         new HtmlWebpackPlugin({
-            title: 'DK Boilerplate',
+            title: 'Weather Forecast',
             template: 'resources/ejs/index-dev.ejs'
         }),
         new FaviconsWebpackPlugin('./resources/assets/img/octopod.png')

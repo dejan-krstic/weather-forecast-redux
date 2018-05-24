@@ -1,7 +1,7 @@
 {
-  "name": "DKBoilerplate",
+  "name": "WeatherForecast",
   "version": "1.0.0",
-  "description": "DK Boilerplate",
+  "description": "Weather Forecast",
   "main": "index.js",
   "repository": "https://github.com/dejan-krstic/dk-boilerplate.git",
   "author": "dejan-krstic <dejanmkrstic@gmail.com>",
@@ -37,11 +37,13 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "lodash": "^4.17.10",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
+    "react-sparklines": "^1.7.0",
     "redux": "^4.0.0",
     "redux-promise": "^0.6.0"
   }
