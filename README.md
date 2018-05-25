@@ -6,7 +6,7 @@ Single Page App which displays a five-day weather forecast for desired cities. U
 
 ## Showcasing
 - Promises with Redux Middleware
-- RESTFul API
+- Event delegation
 - webpack.dev.js & prod.js
 - EJS templates for creating index.html 
 
