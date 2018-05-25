@@ -1,1 +1,1 @@
-export const API_URL = "http://api.openweathermap.org/data/2.5/forecast?appid=";
+export const API_URL = "https://api.openweathermap.org/data/2.5/forecast?appid=";
