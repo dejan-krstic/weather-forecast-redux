@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
-import placeholder from "../../resources/assets/img/placeholder.png";
+import React, { Component } from "react";
+
+import WeatherList from "../containers/weatherList";
+
+
+import SearchBar from "../containers/searchBar";
 
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
-        <div>
-            <div>DK Boilerplate inception</div>
-            <div> <img src={placeholder}/> </div>
-        </div>
+      <div className="container">
+        <h1>5-day Weather Forecast</h1>
+        <SearchBar />
+        <WeatherList />
+      </div>
     );
   }
 }

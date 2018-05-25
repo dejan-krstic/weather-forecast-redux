@@ -56,7 +56,7 @@ module.exports = {
     },
 	plugins: [
         new HtmlWebpackPlugin({
-            title: 'DK Boilerplate',
+            title: 'Weather Forecast',
             template: 'resources/ejs/index-dev.ejs'
         }),
         new FaviconsWebpackPlugin('./resources/assets/img/octopod.png')
