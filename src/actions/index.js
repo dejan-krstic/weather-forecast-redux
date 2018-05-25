@@ -6,10 +6,23 @@ import { API_URL } from "../constants/apiUrl";
 export const FETCH_WEATHER = "FETCH_WEATHER";
 
 export const fetchWeather = (city, countryCode) => {
-    const url = `${API_URL}${city},${countryCode}&appid=${API_KEY}`;
-    const response = axios.get(url);
+    const url = `${API_URL}${API_KEY}&q=${city}${countryCode}`;
+
+    let payload = axios.get(url)
+        .catch(error => {
+            if(error.response.status === 400) {
+                alert("Please enter a valid city name.")
+            } else if(error.response.status === 404) {
+                alert("We couldn't find a city with that name. Please try again.")
+            } else {
+                alert("Oops! An error has ocurred! Please try again.")
+                }
+            })
+        
+
+
     return {
         type: FETCH_WEATHER,
-        payload: response
+        payload
     };
 }

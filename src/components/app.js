@@ -7,12 +7,13 @@ import SearchBar from "../containers/searchBar";
 
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
-        <div className="container">
-            <SearchBar />
-            <WeatherList />
-        </div>
+      <div className="container">
+        <h1>5-day Weather Forecast</h1>
+        <SearchBar />
+        <WeatherList />
+      </div>
     );
   }
 }

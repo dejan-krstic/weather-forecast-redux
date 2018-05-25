@@ -11,29 +11,41 @@ class SearchBar extends Component {
             city: "",
             countryCode: ""
         }
-        this.onFormSubmit=this.onFormSubmit.bind(this)
+        this.onFormSubmit = this.onFormSubmit.bind(this)
     }
+
     onFormSubmit() {
         event.preventDefault();
-        this.props.fetchWeather(this.state.city, this.state.countryCode);
+        let countryCode = "";
+        if (this.state.countryCode) {
+            countryCode = `,${this.state.countryCode}`;
+        }
+        this.props.fetchWeather(this.state.city, countryCode);
         this.setState({ city: "", countryCode: "" });
     }
 
+
     render() {
-        console.log(this.state.city, this.state.countryCode);
         return (
-            <div  className="input-group">
+            <div className="input-group"
+                onKeyPress={event => {
+                    if (event.key === 'Enter') {
+                        this.onFormSubmit()
+                    }
+                }
+                }>
                 <div className="row">
-                    <div className="col-md-10">
+                    <div className="col-md-8">
                         <input
-                            placeholder="City..."
+                            placeholder="Enter a city name and click on Submit or press Enter..."
                             className="form-control"
                             value={this.state.city}
-                            onChange={(event) => this.setState({ city: event.target.value })} />
-                        </div>
-                    <div className="col-md-2">
+                            onChange={(event) => this.setState({ city: event.target.value })} 
+                            autoFocus />
+                    </div>
+                    <div className="col-md-4">
                         <input
-                            placeholder="Country code..."
+                            placeholder="Country code (optional)"
                             className="form-control"
                             value={this.state.countryCode}
                             onChange={(event) => this.setState({ countryCode: event.target.value })} />
