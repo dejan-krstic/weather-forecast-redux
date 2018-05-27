@@ -13,9 +13,6 @@ export const fetchWeather = (city, countryCode) => {
             if(error.response.status === 400){
                 alert("Please enter a valid city name.");
             } else if(error.response.status === 404){
-                console.log(error);
-                console.log(error.response);
-
                 alert("We couldn't find a city with that name. Please try again.");
             } else {
                 alert("Oops! An error has ocurred! Please try again.");
