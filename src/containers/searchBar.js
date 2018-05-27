@@ -15,7 +15,6 @@ class SearchBar extends Component {
     }
 
     onFormSubmit() {
-        event.preventDefault();
         let countryCode = "";
         if (this.state.countryCode) {
             countryCode = `,${this.state.countryCode}`;
